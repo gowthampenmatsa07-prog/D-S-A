@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class DnsCache {
+
+    public static void main(String[] args) {
+
+        Map<String, Long> cache = new HashMap<>();
+
+        cache.put("google.com", 1700000060L);
+        cache.put("github.com", 1700000045L);
+        cache.put("slack.com", 1700000090L);
+        cache.put("kl.ac.in", 1700000030L);
+        cache.put("jio.com", 1700000075L);
+        cache.put("hdfc.in", 1700000020L);
+
+        long now = 1700000030L;
+
+        System.out.println("DNS CACHE EXPIRY SYSTEM");
+        System.out.println("-----------------------");
+        System.out.println("Current Time : " + now);
+        System.out.println();
+
+        System.out.println("Expired Domains:");
+
+        int count = 0;
+
+        for (String domain : cache.keySet()) {
+
+            if (cache.get(domain) <= now) {
+                System.out.println(domain);
+                count++;
+            }
+        }
+
+        System.out.println();
+        System.out.println("Total Expired Domains = " + count);
+    }
+}
