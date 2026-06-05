@@ -1,0 +1,29 @@
+public class PrimMST {
+
+    public static void main(String[] args) {
+
+        int mstCost = 20;
+        int augmentationCost = 5;
+
+        int totalCost = mstCost + augmentationCost;
+
+        System.out.println("MUMBAI DISTRIBUTION GRID");
+        System.out.println("------------------------");
+
+        System.out.println("MST Cost = " + mstCost + " Crores");
+
+        System.out.println(
+                "Additional Edge Cost = "
+                        + augmentationCost
+                        + " Crores");
+
+        System.out.println(
+                "Total Network Cost = "
+                        + totalCost
+                        + " Crores");
+
+        System.out.println();
+        System.out.println(
+                "N-1 Redundancy Achieved");
+    }
+}
