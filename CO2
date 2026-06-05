@@ -1,0 +1,30 @@
+public class SegTreeMax {
+
+    public static void main(String[] args) {
+
+        int[] readings =
+        {71,73,78,75,82,79,77,80};
+
+        int max1 = Integer.MIN_VALUE;
+
+        for(int i=2;i<=6;i++)
+            max1 = Math.max(max1, readings[i]);
+
+        System.out.println("FACTORY SENSOR ALERT SYSTEM");
+        System.out.println("---------------------------");
+
+        System.out.println("Maximum Temperature [3..7] = "
+                + max1);
+
+        readings[3] = 88;
+
+        int max2 = Integer.MIN_VALUE;
+
+        for(int i=1;i<=5;i++)
+            max2 = Math.max(max2, readings[i]);
+
+        System.out.println("After Update (75 -> 88)");
+        System.out.println("Maximum Temperature [2..6] = "
+                + max2);
+    }
+}
